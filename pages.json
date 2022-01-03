@@ -14,8 +14,6 @@
 			"path": "pages/demo/notice/notice"
 		}, {
 			"path": "pages/demo/other/other"
-		}, {
-			"path": "pages/demo/signaturepad/signaturepad"
 		}
 	],
 	"globalStyle": {

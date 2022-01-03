@@ -254,11 +254,6 @@
 						<el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
 					</span>
 				</el-dialog>
-				<el-divider content-position="left">拖拽</el-divider>
-				<el-button type="text" @click="dragDialogVisible = true">点击打开可拖拽 Dialog</el-button>
-				<mc-drag-dialog title="提示" append-to-body :visible.sync="dragDialogVisible">
-					<span>长按标题栏拖拽</span>
-				</mc-drag-dialog>
 			</scroll-view>
 		</el-tab-pane>
 		<el-tab-pane name="tooltip">

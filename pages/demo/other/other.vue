@@ -1,62 +1,5 @@
 <template>
-	<el-tabs value="countto" tab-position="left">
-		<el-tab-pane name="countto">
-			<span slot="label">数字滚动<i @click="$utils.navigateTo('https://github.com/PanJiaChen/vue-countTo')"
-					class="el-icon-question margin-left text-color-grey"></i></span>
-			<scroll-view class="main" scroll-y>
-				<div class='countto-container'>
-					<div class="countto-example-item">
-						<el-divider content-position="left">simple example</el-divider>
-						<code>&lt;count-to :startVal=&#x27;0&#x27; :endVal=&#x27;2018&#x27;
-							:duration=4000&gt;&lt;/count-to&gt;</code>
-						<count-to ref='example1' class='countto-example1' :start-val=startVal1 :end-val='endVal1'
-							:duration=4000></count-to>
-						<div class='countto-example-btn' @click='start1'>start</div>
-						<div class='countto-example-btn' @click='changeExampleEndVal'>change end-val</div>
-						<div class='countto-example-btn' @click='incrementalUpdate'>incremental update</div>
-					</div>
-					<div class="countto-example-item">
-						<el-divider content-position="left">count down example</el-divider>
-						<code> &lt;count-to :startVal=&#x27;2017&#x27; :endVal=&#x27;0&#x27;
-							:duration=8000&gt;&lt;/count-to&gt;</code>
-						<count-to ref='example2' class='countto-example2' :start-val='2017' :end-val=0 :duration=8000>
-						</count-to>
-						<div class='countto-example-btn' @click='start2'>start</div>
-					</div>
-					<div class="countto-example-item">
-						<el-divider content-position="left">custom example</el-divider>
-						<count-to ref='example3' class='countto-example3' :start-val='_startVal' :end-val='_endVal'
-							:duration='_duration' :decimals='_decimals' :separator='_separator' :prefix='_prefix'
-							:suffix='_suffix' :autoplay=false>
-						</count-to>
-						<div>
-							<label class="countto-label" for="startValInput">startVal: <input class="countto-input"
-									type="number" v-model.number='setStartVal' name='startValInput' /></label>
-							<label class="countto-label" for="endValInput">endVal: <input class="countto-input"
-									type="number" v-model.number='setEndVal' name='endVaInput' /></label>
-							<label class="countto-label" for="durationInput">duration: <input class="countto-input"
-									type="number" v-model.number='setDuration' name='durationInput' /></label>
-							<div class="countto-startBtn countto-example-btn" @click='start3'>start</div>
-							<div class="countto-pause-resume-btn countto-example-btn" @click='pauseResume'>pause/resume
-							</div>
-							<br />
-							<label class="countto-label" for="decimalsInput">decimals: <input class="countto-input"
-									type="number" v-model.number='setDecimals' name='decimalsInput' /></label>
-							<label class="countto-label" for="separatorInput">separator: <input class="countto-input"
-									v-model='setSeparator' name='separatorInput' /></label>
-							<label class="countto-label" for="prefixInput">prefix: <input class="countto-input"
-									v-model='setPrefix' name='prefixInput' /></label>
-							<label class="countto-label" for="suffixInput">suffix: <input class="countto-input"
-									v-model='setSuffix' name='suffixInput' /></label>
-						</div>
-						<code>&lt;count-to :start-val=&#x27;{{_startVal}}&#x27; :end-val=&#x27;{{_endVal}}&#x27;
-							:duration=&#x27;{{_duration}}&#x27; :decimals=&#x27;{{_decimals}}&#x27;
-							:separator=&#x27;{{_separator}}&#x27; :prefix=&#x27;{{_prefix}}&#x27;
-							:suffix=&#x27;{{_suffix}}&#x27; :autoplay=false&gt;</code>
-					</div>
-				</div>
-			</scroll-view>
-		</el-tab-pane>
+	<el-tabs value="breadcrumb" tab-position="left">
 		<el-tab-pane name="breadcrumb">
 			<span slot="label">面包屑<i @click="$utils.navigateTo('https://element.eleme.cn/#/zh-CN/component/breadcrumb')"
 					class="el-icon-question margin-left text-color-grey"></i></span>
@@ -851,42 +794,11 @@
 				</el-image>
 			</scroll-view>
 		</el-tab-pane>
-		<el-tab-pane name="transfer">
-			<span slot="label">穿梭框<i @click="$utils.navigateTo('https://element.eleme.cn/#/zh-CN/component/transfer')"
-					class="el-icon-question margin-left text-color-grey"></i></span>
-			<scroll-view class="main" scroll-y>
-				<el-divider content-position="left">分页搜索</el-divider>
-				<mc-transfer-paging width="300px" :props="tfProps" :currentPage="currentPage" :totalResult="totalResult"
-					v-model="tfValue" :data="tfData" @search="tfSearch" @save="tfSave" :titles="tfTitles">
-				</mc-transfer-paging>
-			</scroll-view>
-		</el-tab-pane>
-		<el-tab-pane name="dragselect">
-			<span slot="label">拖拽选择器<i
-					@click="$utils.navigateTo('https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/DragSelect/index.vue')"
-					class="el-icon-question margin-left text-color-grey"></i></span>
-			<scroll-view class="main" scroll-y>
-				<mc-drag-select v-model="dsValue" style="width:500px;" multiple placeholder="请选择">
-					<el-option v-for="item in dsOptions" :key="item.value" :label="item.label" :value="item.value" />
-				</mc-drag-select>
-
-				<div style="margin-top:30px;">
-					<el-tag v-for="item of dsValue" :key="item" style="margin-right:15px;">
-						{{ item }}
-					</el-tag>
-				</div>
-			</scroll-view>
-		</el-tab-pane>
 	</el-tabs>
 </template>
 
 <script>
-	import countTo from 'vue-count-to';
-
 	export default {
-		components: {
-			countTo
-		},
 		data() {
 			return {
 				dsValue: ['Apple', 'Banana', 'Orange'],

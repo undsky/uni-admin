@@ -68,13 +68,6 @@ export default {
 					icon: '',
 					url: '/pages/demo/other/other',
 					keepAlive: true
-				},
-				{
-					id: 'signaturepad',
-					pid: 'demo',
-					icon: '',
-					url: '/pages/demo/signaturepad/signaturepad',
-					keepAlive: true
 				}
 			]
 		};
