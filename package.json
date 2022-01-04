@@ -1,6 +1,7 @@
 {
 	"name": "uni-admin",
-	"version": "1.0.0",
+	"version": "1.0.2",
+	"description": "",
 	"repository": "https://github.com/undsky/uni-admin.git",
 	"author": "姜彦汐 https://www.undsky.com",
 	"license": "MIT",

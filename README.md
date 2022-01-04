@@ -5,6 +5,10 @@
 ### 初始化
 
 ```bash
+git clone https://gitee.com/mc-uniapp/uni-admin.git
+
+cd uni-admin
+
 npm install
 # or
 yarn install
