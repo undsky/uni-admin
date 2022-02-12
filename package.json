@@ -16,9 +16,7 @@
 		"screenfull": "^6.0.0",
 		"uni-simple-router": "^2.0.7",
 		"vue-i18n": "^8.26.7",
-		"vxe-table": "^3.4.12",
-		"vxe-table-plugin-element": "^1.11.4",
-		"xe-utils": "^3.5.1"
+		"xe-utils": "^3.5.4"
 	},
 	"devDependencies": {
 		"async-validator": "1.11.5",
